@@ -39,6 +39,22 @@ void push_back(int data){
         tail = n;
     }
 }
+void inser_position(int data,int pos){
+    if(pos == 0){
+        node *n = new node(data);
+        n->next = head;
+        head = n;
+    }
+    else{
+        node *temp = head;
+        for(int jump = 1;jump<=pos-1;jump++){
+            temp = temp->next;
+        }
+        node *n =new node(data);
+        n->next = temp->next;
+        temp->next = n;
+    }
+}
 int main()
 {
     push(8);
