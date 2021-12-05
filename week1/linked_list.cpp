@@ -59,9 +59,10 @@ int main()
 {
     push(8);
     push_back(19);
-    while(head){
-        cout<<head->data;
+    push_back(20);
+    
+    while(head != NULL){
+        cout<<head->data<<" ";
         head = head->next;
     }
-
 }
